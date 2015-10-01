@@ -30,3 +30,9 @@ Download this file and add it to your website as you would with any .js file.
   r: red component of the bg-color
   g: green component of the bg-color
   b: blue component of the bg-color
+
+#TODO list
+1. Improve of icon sizes in Easy mode
+2. Supply an example
+3. Get starred at least once
+4. Give proper credit where credit is due (I will, I promise)
