@@ -10,29 +10,30 @@ Download this file and add it to your website as you would with any .js file.
 
 # Methods
 1. Full control: function flatify(target, r, g, b, f, w, s, a) RECOMMENDED where
-  *. target: id of the element
-  *. r: red component of the bg-color
-  g: green component of the bg-color
-  b: blue component of the bg-color
-  f: font-size of the icon
-  w: width of the icon
-  s: shadow length
+  target: id of the element, 
+  r: red component of the bg-color, 
+  g: green component of the bg-color, 
+  b: blue component of the bg-color, 
+  f: font-size of the icon, 
+  w: width of the icon, 
+  s: shadow length, 
   a: shadow opacity
 2. Full control providing JSON: function flatifySettings(target, settings) where
-  target: id of the element
-  settings: JSON containing the arguments for a full control of the effects
+  target: id of the element, 
+  settings: JSON containing the arguments for a full control of the effects, 
 3. Easy mode: function flatifyColorShadow(target, color, shadow) where
-  target: id of the element
-  color: JSON with the three components for a rgb color
-  shadow: JSON with the 3 arguments for width of the icon, lenght and opacity of the shadow
+  target: id of the element, 
+  color: JSON with the three components for a rgb color, 
+  shadow: JSON with the 3 arguments for width of the icon, lenght and opacity of the shadow, 
 4. Small mode: function flatifyColor(target, r, g, b) where
-  target: id of the element
-  r: red component of the bg-color
-  g: green component of the bg-color
+  target: id of the element, 
+  r: red component of the bg-color, 
+  g: green component of the bg-color, 
   b: blue component of the bg-color
 
 #TODO list
 1. Improve of icon sizes in Easy mode
-2. Supply an example
+2. Greatly improve the handling of missing parameters
+2. Supply an example of use
 3. Get starred at least once
 4. Give proper credit where credit is due (I will, I promise)
