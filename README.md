@@ -1,5 +1,5 @@
 # Flatify v0.1
-Small jQuery library to "flatify" Android-like icons for the web
+Small jQuery library to "flatify" Android-like icons for the web that works wonders with glyph and icons fonts like FontAwesome.
  
 # Usage
 Download this file and add it to your website as you would with any .js file.
