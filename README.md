@@ -10,8 +10,8 @@ Download this file and add it to your website as you would with any .js file.
 
 # Methods
 1. Full control: function flatify(target, r, g, b, f, w, s, a) RECOMMENDED where
-  target: id of the element
-  r: red component of the bg-color
+  *. target: id of the element
+  *. r: red component of the bg-color
   g: green component of the bg-color
   b: blue component of the bg-color
   f: font-size of the icon
