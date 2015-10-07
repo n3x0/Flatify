@@ -2,7 +2,10 @@
 Small jQuery library to "flatify" Android-like icons for the web that works wonders with glyph and icons fonts like FontAwesome.
  
 # Usage
-Download this file and add it to your website as you would with any .js file.
+* Download this file and add it to your website as you would with any .js file.
+* Use this CDN in your meta section
+
+    https://cdn.rawgit.com/n3x0/Flatify/master/flatify.js
 
 1. Give your soon to be Material-Design icons a css id.
 2. At your "$(document).ready(function())" apply your style
