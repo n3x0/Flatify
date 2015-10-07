@@ -13,7 +13,9 @@ Download this file and add it to your website as you would with any .js file.
 
 Full control providing JSON: function flatifySettings(target, settings) where
   targetID: id of the element, 
-  settings: JSON containing the arguments being:
+  settings: JSON containing the arguments.
+
+#Parameters
      'r' : [ 0 - 255 ] for red color component for the icon,
      'g' : [ 0 - 255 ] for red color component for the icon,
      'b' : [ 0 - 255 ] for red color component for the icon,
@@ -34,3 +36,4 @@ Full control providing JSON: function flatifySettings(target, settings) where
 3. Get starred at least once -- DONE twice, thx guys
 4. Give proper credit where credit is due (I will, I promise)
 5. Provide a more verbose way to define parameters
+
