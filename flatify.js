@@ -2,42 +2,49 @@ function fade (color, alpha, steps, step){
 	return Math.round( (color*((1-((1-alpha)/steps*step)))) );
 }
 
-function flatify(target, r, g, b, f, w, s, a){
-	var text_shadow = '';// = 'text-shadow: ';
-	var shadows = s;
-	var alpha = a;
-	var r = r;
-	var f = f;
-	var g = g;
-	var b = b;
-	var w = w;
-	for (i = 1; i <= shadows; i++) {
-		text_shadow =  " " + (shadows - i) + "px " + (shadows - i) + "px rgb(" + fade(r, alpha, shadows, i) + ", " + fade(g, alpha, shadows, i) + ", "  + fade(b, alpha, shadows, i) + ")," + text_shadow;
-	}
-	text_shadow = text_shadow.substring(0, text_shadow.length - 1);
-	var css = {
-		"text-shadow":text_shadow,
-		"font-size": f+"px",
-		"color":"white",
-		"background-color":"rgb(" + r + ", " + g + ", " + b + ")",
-		"height":w+"px",
-		"width":w+"px",
-		"line-height":w+"px",
-		"text-align":"center"
-	};
-	//alert(text_shadow);
-	//alert(JSON.stringify(css));
+jQuery.fn.extend({
+	flatify: function(settings) {
+    	var text_shadow = '';
+    	var shadows
+    	var alpha
+    	var r;
+    	var g;
+    	var b;
+    	var f;
+    	var w;
+    	var c;
 
-	$(target).css(css);
-}
+    	//checkeos de existencia e inicialización
+    	//Colores
+    	(settings.r >= 0 && settings.r <= 255) ? r = settings.r : r = 59;
+    	(settings.g >= 0 && settings.g <= 255) ? g = settings.g : g = 89;
+    	(settings.b >= 0 && settings.b <= 255) ? b = settings.b : b = 152;
 
-function flatifyColor(target, r, g, b){
-	flatify(target, r, g, b, 20, 30, 5, 0.9);
-}
-function flatifyColorShadow(target, color, shadow){
-	flatify(target, settings.r, settings.g, settings.b, (settings.w-10), settings.w, settings.s, settings.a);
-}
+    	//Forma
+    	settings.f > 20 ? f = settings.f : f = 20;
+    	settings.w > 30 ? w = settings.w : w = 30;
+    	(settings.c >= 0 && settings.c <= 50) ? c = settings.c : c = 0;
 
-function flatifySettings(target, settings){
-	flatify(target, settings.r, settings.g, settings.b, (settings.w-10), settings.w, settings.s, settings.a);
-}
+    	//Sombra
+    	(settings.a >= 0 && settings.a <= 1) ? alpha = settings.a : alpha = 0.7;
+    	(settings.s >= 0 && settings.s <= 100) ? shadows = settings.s : shadows = 5;
+
+
+    	for (i = 1; i <= shadows; i++) {
+    		text_shadow =  " " + (shadows - i) + "px " + (shadows - i) + "px rgb(" + fade(r, alpha, shadows, i) + ", " + fade(g, alpha, shadows, i) + ", "  + fade(b, alpha, shadows, i) + ")," + text_shadow;
+    	}
+    	text_shadow = text_shadow.substring(0, text_shadow.length - 1);
+    	var css = {
+    		"text-shadow":text_shadow,
+    		"font-size": f+"px",
+    		"color":"white",
+    		"background-color":"rgb(" + r + ", " + g + ", " + b + ")",
+    		"height":w+"px",
+    		"width":w+"px",
+    		"line-height":w+"px",
+    		"border-radius":c+"%",
+    		"text-align":"center"
+    	};
+    	$(this).css(css);
+    }
+});

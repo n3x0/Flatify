@@ -1,39 +1,36 @@
-# Flatify v0.1
+# Flatify v0.2
 Small jQuery library to "flatify" Android-like icons for the web that works wonders with glyph and icons fonts like FontAwesome.
  
 # Usage
 Download this file and add it to your website as you would with any .js file.
 
-1. Give your soon to be Material-Design icons an id.
-2. At your "$(document).ready(function())" apply your style for the icon using 1 of the 4 methods
+1. Give your soon to be Material-Design icons a css id.
+2. At your "$(document).ready(function())" apply your style
 3. Enjoy pure HTML + jQuery + CSS3 Material-Design icons
 
 # Methods
-1. Full control: function flatify(target, r, g, b, f, w, s, a) RECOMMENDED where
-  target: id of the element, 
-  r: red component of the bg-color, 
-  g: green component of the bg-color, 
-  b: blue component of the bg-color, 
-  f: font-size of the icon, 
-  w: width of the icon, 
-  s: shadow length, 
-  a: shadow opacity
-2. Full control providing JSON: function flatifySettings(target, settings) where
-  target: id of the element, 
-  settings: JSON containing the arguments for a full control of the effects, 
-3. Easy mode: function flatifyColorShadow(target, color, shadow) where
-  target: id of the element, 
-  color: JSON with the three components for a rgb color, 
-  shadow: JSON with the 3 arguments for width of the icon, lenght and opacity of the shadow, 
-4. Small mode: function flatifyColor(target, r, g, b) where
-  target: id of the element, 
-  r: red component of the bg-color, 
-  g: green component of the bg-color, 
-  b: blue component of the bg-color
+  $('#targetID').flatify(settings);
+
+Full control providing JSON: function flatifySettings(target, settings) where
+  targetID: id of the element, 
+  settings: JSON containing the arguments being:
+     'r' : [ 0 - 255 ] for red color component for the icon,
+     'g' : [ 0 - 255 ] for red color component for the icon,
+     'b' : [ 0 - 255 ] for red color component for the icon,
+
+     'f' : [ 20 - ∞ ] font size for the icon,
+     'w' : [ 30 - ∞ ] width for the icon,
+     'c' : [ 0 - 50 ] percentage of rounded for icon border,
+
+     's' : [ 0 - 100 ] number of shadows for the icon text,
+     'a' : [ 0 - 1 ] opacity for the icon text shadow,
+     
+  If any of the parameters are missing flatify will provide a default value.
 
 #TODO list
-1. Improve of icon sizes in Easy mode
-2. Greatly improve the handling of missing parameters
-2. Supply an example of use
-3. Get starred at least once
+1. Improve of icon sizes in Easy mode -- DONE
+2. Greatly improve the handling of missing parameters -- DONE
+2. Supply an example of use -- DONE
+3. Get starred at least once -- DONE twice, thx guys
 4. Give proper credit where credit is due (I will, I promise)
+5. Provide a more verbose way to define parameters
